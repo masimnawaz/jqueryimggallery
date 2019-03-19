@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Image Gallery</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.pic').click(function(){
+				$(this).clone().appendTo('#result');
+				$('#result').children().prev().remove();
+				$('#result').children().children().attr({'class': 'result img'});
+			});
+		});
+	</script>
+
+	<center><h2>JQuery Image Gallery</h2></center>
+
+<div id="group">
+	<div class="pic"><img src="https://wallpapercave.com/wp/pobP3XN.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/FVzS3zs.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/hi8QqOs.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2844582.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2557977.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2565119.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2565124.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2565122.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2565112.jpg" class="img"></div>
+	<div class="pic"><img src="https://wallpapercave.com/wp/wp2565108.jpg" class="img"></div>
+</div>
+
+<div id="result">
+	<div class="pic"><img src="https://wallpapercave.com/wp/pobP3XN.jpg" class="img"></div>
+</div>
+
+</body>
+</html>
